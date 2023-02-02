@@ -6,13 +6,19 @@ import "./index.css"
 import AddTodo from "./components/AddTodo"
 
 function App() {
+  const [showAddTodo, setShowAddTodo] = useState(false)
   const [allTodos, setAllTodos] = useState([
     { title: "Todo 1", status: true, id: 0 },
     { title: "Todo 1", status: true, id: 1 },
     { title: "Todo 2", status: false, id: 2 },
-    { title: "Todo 3", status: false, id: 3 },
-    { title: "Todo 4", status: true, id: 4 },
   ])
+
+  // Add Todo
+  const addTodo = (todo) => {
+    const id = Math.floor(Math.random() * 10000) + 1
+    const newTodoTask = { id, ...todo }
+    setAllTodos([...allTodos, newTodoTask])
+  }
 
   // Delete Todo
   function deleteTodoFunc(id) {
@@ -32,8 +38,12 @@ function App() {
 
   return (
     <div className="container">
-      <Header title="Todo App" />
-      <AddTodo />
+      <Header
+        title="Todo App"
+        showAdd={showAddTodo}
+        onAdd={() => setShowAddTodo(!showAddTodo)}
+      />
+      {showAddTodo && <AddTodo onAdd={addTodo} />}
       {AllTodos.length > 0 ? (
         <AllTodos
           allTodos={allTodos}

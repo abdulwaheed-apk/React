@@ -20,10 +20,10 @@ function App() {
         <table className="table">
           <thead>
             <tr>
-              <th>userId</th>
-              <th>id</th>
-              <th>title</th>
-              <th>completed</th>
+              <th>User ID</th>
+              <th>ID</th>
+              <th>Todo Title</th>
+              <th>Status</th>
             </tr>
           </thead>
           <tbody>

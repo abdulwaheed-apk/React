@@ -1,0 +1,70 @@
+
+
+{
+  "results": [
+    {
+      "gender": "female",
+      "name": {
+        "title": "Ms",
+        "first": "Piper",
+        "last": "Davies"
+      },
+      "location": {
+        "street": {
+          "number": 8912,
+          "name": "Herbert Street"
+        },
+        "city": "Christchurch",
+        "state": "Northland",
+        "country": "New Zealand",
+        "postcode": 61811,
+        "coordinates": {
+          "latitude": "52.1240",
+          "longitude": "68.6294"
+        },
+        "timezone": {
+          "offset": "-8:00",
+          "description": "Pacific Time (US & Canada)"
+        }
+      },
+      "email": "piper.davies@example.com",
+      "login": {
+        "uuid": "c2e2e518-9e4e-4574-9c17-b480b05c5d99",
+        "username": "lazypanda357",
+        "password": "asdfg",
+        "salt": "5r6wErMW",
+        "md5": "ced20837952431717d3188be7eb67859",
+        "sha1": "afaed6f192aa3e868df3bc817669ac93e161ffb7",
+        "sha256": "77adca785722b3bee04c2d69f79d481f52f89fb01194f2350d995ba5c09fafb7"
+      },
+      "dob": {
+        "date": "1974-04-24T22:49:34.708Z",
+        "age": 48
+      },
+      "registered": {
+        "date": "2003-01-25T16:59:47.451Z",
+        "age": 20
+      },
+      "phone": "(037)-385-5230",
+      "cell": "(536)-785-6436",
+      "id": {
+        "name": "",
+        "value": null
+      },
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/women/70.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/women/70.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/women/70.jpg"
+      },
+      "nat": "NZ"
+    }
+  ],
+
+  
+  "info": {
+    "seed": "34e83d7b994f49bd",
+    "results": 1,
+    "page": 1,
+    "version": "1.4"
+  }
+}

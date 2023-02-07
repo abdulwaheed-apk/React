@@ -1,0 +1,9 @@
+.d-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    margin: auto;
+    padding: 3rem 0;
+}

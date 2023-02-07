@@ -6,7 +6,7 @@ import "./index.css"
 import AddTodo from "./components/AddTodo"
 
 function App() {
-  const [showAddTodo, setShowAddTodo] = useState(false)
+  const [showAddTodo, setShowAddTodo] = useState(true)
   const [allTodos, setAllTodos] = useState([
     { title: "Todo 1", status: true, id: 0 },
     { title: "Todo 1", status: true, id: 1 },

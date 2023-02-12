@@ -1,0 +1,44 @@
+:root {
+    --orange: hsl(26, 100%, 55%);
+    --paleOrange: hsl(25, 100%, 94%);
+}
+
+html {
+    font-family: 'Kumbh Sans', sans-serif;
+}
+
+dl,
+ol,
+ul {
+    /* margin-top: 0; */
+    margin-bottom: 0rem;
+}
+
+header {
+    min-height: 5rem;
+    margin-top: 1rem;
+
+}
+
+/* .logo {} */
+
+nav ul li {
+    list-style: none;
+    padding: 0 1rem;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.cart {
+    width: 2rem;
+    height: auto;
+    margin-right: 1rem;
+    color: black;
+    fill: black !important;
+}
+
+.avatar {
+    width: 3rem;
+    height: auto;
+    border: 2ps solid var(--orange);
+}

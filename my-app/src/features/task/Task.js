@@ -3,10 +3,10 @@ import { useDispatch, useSelector } from 'react-redux'
 import { addTasks, updateTasks } from '../task/taskSlice'
 import { AiOutlineEdit } from 'react-icons/ai'
 
-function Task() {
+const Task = () => {
   const [text, setText] = useState('')
-  const [updateValue, setupdateValue] = useState('')
-  const [updatedIndex, setupdatedIndex] = useState(0)
+  const [updateValue, setUpdateValue] = useState('')
+  const [updatedIndex, setUpdatedIndex] = useState(0)
   const dispatch = useDispatch()
   const allTasks = useSelector((state) => state.task.tasks)
 
@@ -15,16 +15,15 @@ function Task() {
     dispatch(addTasks(text))
     setText('')
   }
-  const handleupdate = (e) => {
+  const handleUpdate = (e) => {
     e.preventDefault()
     console.log('update')
     dispatch(updateTasks({ index: updatedIndex, value: updateValue }))
   }
   const handleEdit = (i) => {
     console.log('Edit me' + i)
-    setupdatedIndex(i)
-    setupdateValue(allTasks[i])
-    // setText(e.target.value)
+    setUpdatedIndex(i)
+    setUpdateValue(allTasks[i])
   }
   return (
     <>
@@ -43,7 +42,7 @@ function Task() {
             Add task
           </button>
         </form>
-        <form action='' onSubmit={handleupdate} className='w-25 my-3'>
+        <form action='' onSubmit={handleUpdate} className='w-25 my-3'>
           <input
             className='form-control my-2'
             type='text'
@@ -51,7 +50,7 @@ function Task() {
             id='updateInp'
             placeholder='Enter Task'
             value={updateValue}
-            onChange={(e) => setupdateValue(e.target.value)}
+            onChange={(e) => setUpdateValue(e.target.value)}
           />
           <button type='submit' className='btn btn-secondary my-1'>
             Update task

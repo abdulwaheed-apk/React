@@ -1,12 +1,14 @@
 import React from 'react'
-import Task from './features/task/Task'
+// import Task from './features/task/Task'
+import Exercise from './features/exercise/Exercise'
 // import { Counter } from './features/counter/Counter'
 import './App.css'
 
 function App() {
   return (
     <>
-      <Task />
+      <Exercise />
+      {/* <Task /> */}
       {/* <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />

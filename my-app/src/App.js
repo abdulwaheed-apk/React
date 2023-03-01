@@ -1,15 +1,20 @@
 import React from 'react'
-// import Task from './features/task/Task'
-import Exercise from './features/exercise/Exercise'
+import Quote from './features/quotes/Quote'
+// import Exercise from './features/exercise/Exercise'
 // import { Counter } from './features/counter/Counter'
+// import Task from './features/task/Task'
 import './App.css'
 
 function App() {
   return (
     <>
-      <Exercise />
-      {/* <Task /> */}
-      {/* <div className='App'>
+      <div className='container mt-3 m-auto'>
+        <Quote />
+        {/* <Exercise /> */}
+        {/* <Task /> */}
+      </div>
+      <>
+        {/* <div className='App'>
         <header className='App-header'>
           <img src={logo} className='App-logo' alt='logo' />
           <Counter />
@@ -56,6 +61,7 @@ function App() {
           </span>
         </header>
       </div> */}
+      </>
     </>
   )
 }

@@ -12,8 +12,18 @@ const exerciseSlice = createSlice({
       const { exerciseName, id } = action.payload
       state.allExercises = state.allExercises.concat([{ exerciseName, id }])
     },
+    updateExercises: (state, action) => {
+      const { exerciseName, id } = action.payload
+      const newExercises = state.allExercises.map((item) => {
+        if (item.id === id) {
+          item = { id: id, exerciseName: exerciseName }
+        }
+        return item
+      })
+      state.allExercises = newExercises
+    },
   },
 })
 
-export const { showAllExercises } = exerciseSlice.actions
+export const { showAllExercises, updateExercises } = exerciseSlice.actions
 export default exerciseSlice.reducer

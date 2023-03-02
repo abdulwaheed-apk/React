@@ -2,11 +2,12 @@ import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { showQuotes, updateQuote } from './quoteSlice'
 import { FiEdit } from 'react-icons/fi'
+import { v4 as uuidv4 } from 'uuid'
 
 const Quote = () => {
   const [quoteText, setQuoteText] = useState('')
   const [quoteBy, setQuoteBy] = useState('')
-  const [update, setUpdate] = useState({ quoteText: '', quoteBy: '' })
+  const [update, setUpdate] = useState({ id: '', quoteText: '', quoteBy: '' })
 
   // Dispatch
   const dispatch = useDispatch()
@@ -18,7 +19,9 @@ const Quote = () => {
   // Handle Submit
   const handleSubmit = (e) => {
     e.preventDefault()
-    dispatch(showQuotes({ quoteText, quoteBy }))
+    // generate ID (calling inside handle submit so that id will remain same on each render only update on next item addition.)
+    let id = uuidv4()
+    dispatch(showQuotes({ quoteText, quoteBy, id }))
     setQuoteText('')
     setQuoteBy('')
   }

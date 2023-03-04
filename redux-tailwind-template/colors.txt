@@ -1,0 +1,11 @@
+#f9fafb
+#ffffffcc
+#f6f7f8
+//black
+#212b36
+
+// Orange
+#FA541C
+
+// Outline dark btn border normal
+#919eab52

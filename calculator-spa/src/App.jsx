@@ -1,6 +1,5 @@
 import { useReducer } from 'react'
 import DigitButton from './components/DigitButton'
-import './App.css'
 import OperationButton from './components/OperationButton'
 // * Actions
 export const ACTIONS = {
